@@ -1,24 +1,36 @@
-import React, { Component } from 'react'
-import { View, Text } from '@tarojs/components'
-import './index.scss'
+import React, { useState, useCallback } from "react";
+import { View, Text } from "@tarojs/components";
+import { AtInput, AtIcon, AtSearchBar } from "taro-ui";
 
-export default class Index extends Component {
+import Bar from "./components/Bar";
+import styles from "./styles.module.scss";
 
-  componentWillMount () { }
+const App = () => {
+  const [searchValue, setSearchValue] = useState();
 
-  componentDidMount () { }
+  const onChangeSearchVal = useCallback((v) => {
+    setSearchValue(v);
+  }, []);
 
-  componentWillUnmount () { }
+  const onSearch = useCallback(() => {
+    //
+  }, []);
+  console.log(111, styles);
 
-  componentDidShow () { }
-
-  componentDidHide () { }
-
-  render () {
-    return (
-      <View className='index'>
-        <Text>Hello world!</Text>
+  return (
+    <View className={styles.wrap}>
+      <View className={styles.contain}>
+        <AtSearchBar
+          actionName='搜一下美食'
+          value={searchValue}
+          onChange={onChangeSearchVal}
+          onActionClick={onSearch}
+        />
+        <Bar />
+        <Text>Hello world!!!</Text>
       </View>
-    )
-  }
-}
+    </View>
+  );
+};
+
+export default App;
