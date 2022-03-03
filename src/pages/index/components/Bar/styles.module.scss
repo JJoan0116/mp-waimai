@@ -1,0 +1,29 @@
+.wrap {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 10px;
+
+  .item {
+    padding: 10px;
+    text-align: center;
+
+    .imgWrap {
+      width: 156px;
+      height: 120px;
+    }
+
+    .img {
+      width: 140px;
+      height: 110px;
+    }
+
+    .labal {
+      color: #4e4e4e;
+      font-size: 20px;
+    }
+  }
+}
