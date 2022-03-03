@@ -1,0 +1,54 @@
+.wrap {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 66px;
+
+  .active {
+    color: #999;
+    font-weight: bold;
+  }
+
+  .accordion {
+    width: 33.33%;
+    height: 100%;
+  }
+
+  .btn {
+    width: 33.33%;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    text-align: center;
+    padding-top: 16px;
+    height: 100%;
+  }
+}
+
+:global {
+  .at-accordion__header {
+    padding: 10px;
+    font-size: 24px;
+
+    &::after {
+      border: none;
+    }
+  }
+
+  .at-list__item {
+    padding: 16px 10px;
+    font-size: 24px;
+
+    &::after {
+      border: none;
+    }
+  }
+
+  .at-accordion__arrow  {
+    font-size: 40px;
+  }
+}

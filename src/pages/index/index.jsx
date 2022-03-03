@@ -3,6 +3,7 @@ import { View, Text } from "@tarojs/components";
 import { AtInput, AtIcon, AtSearchBar } from "taro-ui";
 
 import Bar from "./components/Bar";
+import List from "./components/List";
 import styles from "./styles.module.scss";
 
 const App = () => {
@@ -27,7 +28,7 @@ const App = () => {
           onActionClick={onSearch}
         />
         <Bar />
-        <Text>Hello world!!!</Text>
+        <List />
       </View>
     </View>
   );
