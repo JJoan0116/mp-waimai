@@ -1,2 +1,75 @@
 .wrap {
+  .item {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    padding: 20px 10px 20px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    .ellipsis {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: keep-all;
+    }
+
+    .imgWrap {
+      width: 160px;
+      height: 160px;
+      margin-right: 10px;
+      background-color: pink;
+
+      .img {
+        width: 160px;
+        height: 160px;
+        background-color: skyblue;
+      }
+    }
+
+    .info {
+      flex: 1;
+      overflow: hidden;
+
+      .title {
+        // margin-bottom: 8px;
+      }
+
+      .shop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: #666;
+        font-size: 24px;
+        // margin-bottom: 8px;
+
+        .shopItem {
+          display: flex;
+          align-items: center;
+        }
+
+        .score {
+          margin-right: 10px;
+          display: flex;
+          align-items: center;
+        }
+
+        .time {
+          margin-right: 10px;
+        }
+      }
+
+      .priceItem {
+        color: #666;
+        font-size: 24px;
+        margin-right: 10px;
+      }
+
+      .praise {
+        color: #ff5354;
+        background-color: bisque;
+        font-size: 24px;
+      }
+    }
+  }
 }

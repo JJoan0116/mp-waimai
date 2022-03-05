@@ -1,16 +1,17 @@
 import React from "react";
-import { View, Image, Text } from "@tarojs/components";
-import { AtAccordion, AtList, AtListItem } from "taro-ui";
+import { View } from "@tarojs/components";
 
-import Accordion from "./components/ListBar";
+import ListBar from "./components/ListBar";
+import List from "./components/List";
 import styles from "./styles.module.scss";
 
-const Bar = () => {
+const App = () => {
   return (
     <View className={styles.wrap}>
-      <Accordion />
+      <ListBar />
+      <List />
     </View>
   );
 };
 
-export default Bar;
+export default App;

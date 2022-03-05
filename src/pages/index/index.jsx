@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
-import { View, Text } from "@tarojs/components";
-import { AtInput, AtIcon, AtSearchBar } from "taro-ui";
+import { View } from "@tarojs/components";
+import { AtSearchBar } from "taro-ui";
 
 import Bar from "./components/Bar";
 import List from "./components/List";
