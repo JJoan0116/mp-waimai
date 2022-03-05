@@ -1,13 +1,15 @@
 import React, { useCallback } from "react";
 import { View, Image, Text } from "@tarojs/components";
 import { AtIcon } from "taro-ui";
+import Taro from "@tarojs/taro";
+import { routerName } from "../../../../../../app.config";
 
 import styles from "./styles.module.scss";
 
 const list = [1, 2, 3, 4, 5];
 const List = () => {
   const onItemClick = useCallback(() => {
-    //onItemClick
+    Taro.navigateTo({ url: routerName.shop });
   }, []);
 
   return (

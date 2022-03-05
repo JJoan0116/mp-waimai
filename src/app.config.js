@@ -4,12 +4,13 @@
  * package开头是分包
  */
 export const routerName = {
-  index: "pages/index/index",
-  order: "pages/order/index",
+  index: "/pages/index/index",
+  order: "/pages/order/index",
+  shop: "/pages/shop/index",
 };
 
 export default {
-  pages: [routerName.index, routerName.order],
+  pages: Object.keys(routerName).map((item) =>routerName[item].substr(1)),
   window: {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#fff",
@@ -19,13 +20,13 @@ export default {
   tabBar: {
     list: [
       {
-        pagePath: routerName.index,
+        pagePath: routerName.index.substr(1),
         text: "首页",
         iconPath: "./assets/images/tabbar/index-normal.png",
         selectedIconPath: "./assets/images/tabbar/index-active.png",
       },
       {
-        pagePath: routerName.order,
+        pagePath: routerName.order.substr(1),
         text: "订单",
         iconPath: "./assets/images/tabbar/order-normal.png",
         selectedIconPath: "./assets/images/tabbar/order-active.png",
